@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./embla.css"
-import Header from "@/components/_header";
 import Footer from "@/components/_footer";
-import _NaveMegaMenuWithHover from "@/components/_header/_nabbar";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -19,11 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <_NaveMegaMenuWithHover /> */}
+       
         {
           children
         }
-       {/* <Footer />  */}
+      <Footer />
       </body>
     </html>
   );
