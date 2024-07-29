@@ -85,15 +85,15 @@ export default function Home() {
     <>
       <main className="bg-white py-20 sm:py-20 md:py-20 ">
         {/* this  is carousel section...*/}
-        <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
+        {/* <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
           <Slider {...settings}>
             {SlideData.map((item) => (
               <img src={item.name} alt="" className="object-fill" />
             ))}
           </Slider>
-        </section>
+        </section> */}
         {/** this for New Arrival project */}
-        <section>
+        {/* <section>
           <div className="bg-slate-200 text-center">
             <h2 className="text-base font-semibold leading-7">Ready-to-Ship Styles</h2>
             <hr />
@@ -134,10 +134,10 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/** this for New Occasion project */}
-        <section>
+        {/* <section>
           <h2 className="text-base font-semibold leading-7 text-center">Shop by
             Occasion</h2>
           <div className="mx-auto mt-3 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl 
@@ -173,10 +173,10 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
 
-        <section>
+        {/* <section>
           <div className="bg-slate-200 text-center">
             <h2 className="text-base font-semibold leading-7">Ready-to-Ship Styles</h2>
             <hr />
@@ -206,9 +206,11 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
       </main>
+
+      <p>hello</p>
     </>
   );
 }
