@@ -6,9 +6,9 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import { ProductProps } from "../models/_product_model";
+import { ProductProps } from "./models/_product_model";
 
-export default function Cardlayout(props: ProductProps) {
+export default function SimilarProductCard(props: ProductProps) {
   return (
     <>
       <div className="ml-2 bg-slate-50 rounded-lg">
