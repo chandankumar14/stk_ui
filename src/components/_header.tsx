@@ -1,6 +1,11 @@
 "use client";
+import { useState } from "react";
 
 export default function MenuHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen((prevState) => !prevState);
+  };
   return (
     <>
       <header className="shadow-md font-[sans-serif] tracking-wide relative z-50">
@@ -88,8 +93,8 @@ export default function MenuHeader() {
                     Sign In
                   </button>
                 </li>
-                <li id="toggleOpen" className="lg:hidden">
-                  <button>
+                <li className="lg:hidden">
+                  <button id="toggleOpen" onClick={handleClick}>
                     <svg
                       className="w-7 h-7"
                       fill="#333"
@@ -111,10 +116,15 @@ export default function MenuHeader() {
 
         <div
           id="collapseMenu"
+          style={{
+            display: isOpen ? "block" : "none",
+            transition: "display 0.3s ease",
+          }}
           className="max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50"
         >
           <button
             id="toggleClose"
+            onClick={handleClick}
             className="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3"
           >
             <svg
@@ -221,19 +231,3 @@ export default function MenuHeader() {
     </>
   );
 }
-
-
-// var toggleOpen = document.getElementById('toggleOpen');
-// var toggleClose = document.getElementById('toggleClose');
-// var collapseMenu = document.getElementById('collapseMenu');
-
-// function handleClick() {
-//   if (collapseMenu.style.display === 'block') {
-//     collapseMenu.style.display = 'none';
-//   } else {
-//     collapseMenu.style.display = 'block';
-//   }
-// }
-
-// toggleOpen.addEventListener('click', handleClick);
-// toggleClose.addEventListener('click', handleClick);
