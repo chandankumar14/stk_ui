@@ -2,6 +2,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from "react";
 const SlideData = [
   {
     name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/3/03_14.jpg",
@@ -13,7 +14,7 @@ const SlideData = [
     name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/4/04_11.jpg",
   },
 ];
-
+let result: any[] = [];
 const settings = {
   dots: true,
   infinite: true,
@@ -27,30 +28,30 @@ export default function Home() {
   return (
     <>
       <main className="bg-white py-20 sm:py-20 md:py-20 ">
-        {/* this  is carousel section...*/}
-        {/* <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
+        <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
           <Slider {...settings}>
             {SlideData.map((item) => (
               <img src={item.name} alt="" className="object-fill" />
             ))}
           </Slider>
-        </section> */}
-        {/** this for New Arrival project */}
-        <section>
+        </section>
+
+        <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
           <div className=" text-center">
-            <h2 className="text-base font-semibold leading-7">
-             Row Section
-            </h2>
+            <h2 className="text-base font-semibold leading-7">Row Section</h2>
             <hr />
-            <div className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"></div>
+            <div className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
           </div>
+         
         </section>
 
         <section>
           <div className="bg-slate-200 text-center">
-            <h2 className="text-base font-semibold leading-7">
-             Spect section
-            </h2>
+            <h2 className="text-base font-semibold leading-7">Spect section</h2>
             <hr />
             <div className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"></div>
           </div>
