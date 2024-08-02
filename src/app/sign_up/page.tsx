@@ -1,4 +1,12 @@
+"use client";
+import { useState } from "react";
 export default function SignUp() {
+  const [name, setName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [email, setemail] = useState("");
+  const [Country, setCountry] = useState("");
+  const [city, setcity] = useState("");
+
   return (
     <form>
       <div className="space-y-12">
@@ -20,8 +28,8 @@ export default function SignUp() {
               </label>
               <div className="mt-2">
                 <input
-                  id="first-name"
-                  name="first-name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   type="text"
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 
@@ -40,7 +48,7 @@ export default function SignUp() {
               </label>
               <div className="mt-2">
                 <input
-                  id="last-name"
+                  value={lastName}
                   name="last-name"
                   type="text"
                   autoComplete="family-name"
