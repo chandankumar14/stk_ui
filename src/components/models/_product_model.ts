@@ -28,3 +28,10 @@ export interface categoryProduct {
   category_id: number;
   product_description: string;
 }
+
+export interface DemoModel {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}

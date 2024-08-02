@@ -2,8 +2,18 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-export default function BannerCarousel(payload: CAROUSEL_BANNER) {
+const SlideData = [
+  {
+    name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/3/03_14.jpg",
+  },
+  {
+    name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/5/05_7.jpg",
+  },
+  {
+    name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/4/04_11.jpg",
+  },
+];
+export default function BannerCarousel(payload:any) {
   const CarouselConfig = {
     dots: true,
     infinite: true,
@@ -18,7 +28,7 @@ export default function BannerCarousel(payload: CAROUSEL_BANNER) {
     <>
       <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
         <Slider {...CarouselConfig}>
-          {payload.map((item) => (
+          {payload.map((item:any) => (
             <img src={item.name} alt="" className="object-fill" />
           ))}
         </Slider>
