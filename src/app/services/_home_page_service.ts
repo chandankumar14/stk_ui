@@ -9,30 +9,10 @@ const api = axios.create({
     "Content-Type": "application/json",
   },
 });
-
 // Example API function
 export const getItems = async () => {
   const response = await api.get("/items");
   return response.data;
-};
-
-// Another example API function
-export const getItemById = async (id: any) => {
-  const response = await api.get(`/items/${id}`);
-  return response.data;
-};
-
-// Function to post data
-export const createItem = async (itemData: any) => {
-  const response = await api.post("/items", itemData);
-  return response.data;
-};
-
-/** Get Category List API call******** */
-
-export const getCategoryList = async () => {
-  const response = await api.get("category_list");
-  return response;
 };
 
 export function fetchData(): Observable<any> {
