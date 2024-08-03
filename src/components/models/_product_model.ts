@@ -35,3 +35,7 @@ export interface DemoModel {
   title: string;
   completed: boolean;
 }
+
+export interface DemoModelProp {
+  propList: DemoModel[];
+ }
