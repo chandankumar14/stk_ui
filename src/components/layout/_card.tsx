@@ -6,7 +6,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import { DemoModelProp, ProductProps } from "../models/_product_model";
+import { DemoModelProp,  } from "../models/_product_model";
 
 export default function Cardlayout(props: DemoModelProp) {
   return (

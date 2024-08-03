@@ -1,4 +1,4 @@
-export interface ProductProps {
+export interface PRODUCT {
   product_id: number;
   product_name: string;
   product_size: string;
@@ -13,12 +13,12 @@ export interface ProductProps {
   isDeleted: boolean;
 }
 
-export interface CategoryLayout {
+export interface CATEGORY_LAYOUT {
   category_id: number;
   category_name: string;
   category_layout: string;
   category_banner1: string;
-  productList: categoryProduct[];
+  productList: PRODUCT[];
 }
 
 export interface categoryProduct {
@@ -38,4 +38,4 @@ export interface DemoModel {
 
 export interface DemoModelProp {
   propList: DemoModel[];
- }
+}

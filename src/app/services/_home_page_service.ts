@@ -1,4 +1,4 @@
-import { DemoModel, ProductProps } from "@/components/models/_product_model";
+import { DemoModel,  } from "@/components/models/_product_model";
 import axios from "axios";
 import { from, Observable } from "rxjs";
 import { map, catchError } from "rxjs/operators";

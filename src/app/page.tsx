@@ -4,7 +4,7 @@ import {
   GetHomePageBannerList,
   GetProductList,
 } from "./services/_home_page_service";
-import { DemoModel, ProductProps } from "@/components/models/_product_model";
+import { DemoModel,  } from "@/components/models/_product_model";
 import { Subscription } from "rxjs";
 import Cardlayout from "@/components/layout/_card";
 
