@@ -13,7 +13,7 @@ const SlideData = [
     name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/4/04_11.jpg",
   },
 ];
-export default function BannerCarousel(payload:any) {
+export default function BannerCarousel(payload: any) {
   const CarouselConfig = {
     dots: true,
     infinite: true,
@@ -28,7 +28,7 @@ export default function BannerCarousel(payload:any) {
     <>
       <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
         <Slider {...CarouselConfig}>
-          {payload.map((item:any) => (
+          {payload.map((item: any) => (
             <img src={item.name} alt="" className="object-fill" />
           ))}
         </Slider>
