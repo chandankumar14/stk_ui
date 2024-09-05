@@ -3,7 +3,7 @@
 export default function CartList() {
   return (
     <>
-      <section className="py-24 relative">
+      <section className="py-24 relative mt-12">
         <div className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
           <h2 className="title font-manrope font-bold text-4xl leading-10 mb-8 text-center text-black">
             Shopping Cart
@@ -25,7 +25,7 @@ export default function CartList() {
             <div className="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
               <div className="img-box">
                 <img
-                  src="https://pagedone.io/asset/uploads/1701162850.png"
+                  src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                   alt="perfume bottle image"
                   className="xl:w-[140px] rounded-xl"
                 />
@@ -127,7 +127,7 @@ export default function CartList() {
             <div className="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
               <div className="img-box">
                 <img
-                  src="https://pagedone.io/asset/uploads/1701162866.png"
+                  src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                   alt="perfume bottle image"
                   className="xl:w-[140px] rounded-xl"
                 />

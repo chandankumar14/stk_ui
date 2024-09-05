@@ -3,12 +3,12 @@ import { useState } from "react";
 export default function MenuHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
-   setIsOpen((prevState) => !prevState);
-   
+    setIsOpen((prevState) => !prevState);
+
   };
   return (
     <>
-      <header className="shadow-md font-[sans-serif] tracking-wide relative z-50">
+      <header className="shadow-md font-[sans-serif] tracking-wide w-full z-50 fixed">
         <section className="md:flex lg:items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[80px] max-lg:min-h-[60px]">
           <a
             href="#"
@@ -143,7 +143,12 @@ export default function MenuHeader() {
             </svg>
           </button>
 
-          <ul className="lg:flex lg:flex-wrap lg:items-center lg:justify-center px-10 py-3 bg-[#333] min-h-[46px] gap-4 max-lg:space-y-4 max-lg:fixed max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+          <ul className="lg:flex lg:flex-wrap lg:items-center 
+          lg:justify-center px-10 py-3 bg-[#333] min-h-[46px] 
+          gap-4 max-lg:space-y-4 max-lg:fixed max-lg:w-1/2 
+          max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0
+           max-lg:p-6 max-lg:h-full max-lg:shadow-md 
+           max-lg:overflow-auto z-50">
             <li className="mb-6 hidden max-lg:block">
               <a href="#">
                 <img

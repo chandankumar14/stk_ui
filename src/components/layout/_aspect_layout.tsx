@@ -1,5 +1,5 @@
 "use client";
-import { ProductProps } from "../models/_product_model";
+import { useRouter } from 'next/navigation';
 const product = {
   images: [
     {
@@ -20,7 +20,8 @@ const product = {
     },
   ],
 };
-export default function AspectLayout(props:ProductProps) {
+export default function AspectLayout() {
+  const router = useRouter()
   return (
     <>
       <section>
@@ -35,30 +36,34 @@ export default function AspectLayout(props:ProductProps) {
             <img
               src={product.images[0].src}
               alt={product.images[0].alt}
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-center cursor-pointer"
+              onClick={() => router.push('/product_list', { scroll: true })}
             />
           </div>
           <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg"
+            onClick={() => router.push('/product_list', { scroll: true })}>
               <img
                 src={product.images[1].src}
                 alt={product.images[1].alt}
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full object-cover object-center cursor-pointer"
               />
             </div>
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg"
+            onClick={() => router.push('/product_list', { scroll: true })}>
               <img
                 src={product.images[2].src}
                 alt={product.images[2].alt}
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full object-cover object-center cursor-pointer"
               />
             </div>
           </div>
-          <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+          <div  onClick={() => router.push('/product_list', { scroll: true })}
+          className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
             <img
               src={product.images[3].src}
               alt={product.images[3].alt}
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-center cursor-pointer"
             />
           </div>
         </div>
