@@ -1,5 +1,4 @@
-import { ProductProps } from "./models/_product_model";
-export default function CheckOut(props:ProductProps) {
+export default function CheckOut() {
   return (
     <>
       <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
