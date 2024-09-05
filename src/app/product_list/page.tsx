@@ -4,13 +4,11 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
 import { Subscription } from "rxjs";
 import { GetHomePageBannerList, GetProductList } from "../services/_home_page_service";
-
 export default function ProductList() {
   const router = useRouter()
   const [products, setProducts] = useState<DemoModel[]>([]);
   const [Banner, setBenner] = useState<DemoModel[]>([]);
   const [error, setError] = useState<string | null>();
-
   useEffect(() => {
     const subscription: Subscription = GetProductList().subscribe({
       next: (data) => setProducts(data),
