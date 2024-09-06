@@ -24,6 +24,7 @@ export default function MenuHeader() {
           <div className="flex flex-wrap w-full items-center">
             <input
               type="text"
+              disabled
               placeholder="Search something..."
               className="xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4 bg-gray-100 focus:bg-transparent px-6 rounded h-11 outline-[#333] text-sm transition-all"
             />
@@ -102,9 +103,9 @@ export default function MenuHeader() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                   </button>
@@ -144,11 +145,11 @@ export default function MenuHeader() {
           </button>
 
           <ul className="lg:flex lg:flex-wrap lg:items-center 
-          lg:justify-center px-10 py-3 bg-[#333] min-h-[46px] 
+          lg:justify-center px-10 py-3  min-h-[46px] 
           gap-4 max-lg:space-y-4 max-lg:fixed max-lg:w-1/2 
           max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0
-           max-lg:p-6 max-lg:h-full max-lg:shadow-md 
-           max-lg:overflow-auto z-50">
+           max-lg:p-6 max-lg:h-full max-lg:shadow-current
+           max-lg:overflow-auto z-50  bg-pink-100 mb-4"> 
             <li className="mb-6 hidden max-lg:block">
               <a href="#">
                 <img
@@ -158,18 +159,18 @@ export default function MenuHeader() {
                 />
               </a>
             </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
+            <li className="max-lg:border-b max-lg:py-3 px-3 text-[#333]">
               <a
                 href="#"
-                className="hover:text-yellow-300 text-yellow-300 text-[15px] font-medium block"
+                className="text-[15px] font-medium block"
               >
-                New
+                New arrival
               </a>
             </li>
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
+                className=" text-[15px] font-medium block"
               >
                 Brands
               </a>
@@ -177,47 +178,33 @@ export default function MenuHeader() {
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
+                className=" text-[15px] font-medium block"
               >
-                Makeup
+                All Product
               </a>
             </li>
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
+                className=" text-[15px] font-medium block"
               >
-                Hair
+               Trending
               </a>
             </li>
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
+                className=" text-[15px] font-medium block"
               >
-                Tools & Brushes
+                Collections
               </a>
             </li>
+            
+            
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
-              >
-                Bath & body
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
-              >
-                Clean Body
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
+                className=" text-[15px] font-medium block"
               >
                 Gifts
               </a>
@@ -225,9 +212,9 @@ export default function MenuHeader() {
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="#"
-                className="hover:text-yellow-300 text-white text-[15px] font-medium block"
+                className=" text-[15px] font-medium block"
               >
-                Skincare
+               Shop by Occasion
               </a>
             </li>
           </ul>
