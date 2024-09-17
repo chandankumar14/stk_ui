@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AspectLayout from "@/components/layout/_aspect_layout";
+import PopularProducts from "@/components/_popular_products";
 const SlideData = [
   {
     name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/3/03_14.jpg",
@@ -104,8 +105,8 @@ export default function Home() {
             </div>
 
             <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 px-4 my-12">
-              <div className="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
-                <div className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
+              <div className="bg-pink-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+                <div className="bg-pink-400 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16px"
@@ -137,8 +138,8 @@ export default function Home() {
                   <h4 className="text-lg text-gray-800 font-bold mt-4">$10</h4>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
-                <div className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
+              <div className="bg-pink-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+                <div className="bg-pink-400 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16px"
@@ -170,8 +171,8 @@ export default function Home() {
                   <h4 className="text-lg text-gray-800 font-bold mt-4">$10</h4>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
-                <div className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
+              <div className="bg-pink-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+                <div className="bg-pink-400 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16px"
@@ -203,8 +204,8 @@ export default function Home() {
                   <h4 className="text-lg text-gray-800 font-bold mt-4">$10</h4>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
-                <div className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
+              <div className="bg-pink-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+                <div className="bg-pink-400 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16px"
@@ -239,6 +240,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
       </main>
     </>
   );

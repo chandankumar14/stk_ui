@@ -6,7 +6,7 @@ export default function Footer() {
     <>
        
 
-      <div className="py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-100 text-sm mt-24">
+      <div className="py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-neutral-300 text-sm mt-24">
         {/* TOP */}
         <div className="flex flex-col md:flex-row justify-between gap-24">
           {/* LEFT */}
@@ -88,8 +88,8 @@ export default function Footer() {
         </div>
         {/* BOTTOM */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
-          <div className="">© 2024 Lama Shop</div>
-          <div className="flex flex-col gap-8 md:flex-row">
+          <div className="">© 2024 Satikaa</div>
+          {/* <div className="flex flex-col gap-8 md:flex-row">
             <div className="">
               <span className="text-gray-500 mr-4">Language</span>
               <span className="font-medium">United States | English</span>
@@ -98,7 +98,7 @@ export default function Footer() {
               <span className="text-gray-500 mr-4">Currency</span>
               <span className="font-medium">$ USD</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

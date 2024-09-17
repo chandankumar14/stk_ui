@@ -31,14 +31,30 @@ export default function ProductList() {
 
   return (
     <>
-      {/* <div className="ml-2 bg-white rounded-none">
-      <h2 className="text-base font-semibold leading-7">Heading</h2>
-      <hr />
+      <div className="px-4 md:px-8 lg:px-16 xl:px-4 2xl:px-64 py-[160px] bg-pink-100">
+        {/* CAMPAIGN */}
+        <div className="hidden bg-pink-100 px-4 sm:flex  h-64 container">
+          <div className="w-2/3 flex flex-col items-center justify-center ">
+            <h1 className="text-4xl font-semibold  text-gray-700">
+              Grab up to 50% off on
+              <br /> Selected Products
+            </h1>
+            <button className="rounded-3xl bg-lama text-gray-900 w-max py-3 px-5 text-xl outline-1 ">
+              Buy Now
+            </button>
+          </div>
+          <div className="relative w-1/3">
+            <Image src="/woman.png" alt="" fill className="object-contain" />
+          </div>
+        </div>
+      </div>
+      <div className="ml-2 bg-white rounded-none">
+
         <div className="font-[sans-serif] bg-gray-100">
           <div className="p-4 mx-auto lg:max-w-7xl sm:max-w-full">
-            <div className="grid grid-cols-1 mt-24 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6">
+            <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6">
               {products.map((product) => (
-                <div key={product.id} onClick={() => router.push('/product_details', { scroll: true })} className="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+                <div key={product.id} onClick={() => router.push('/product_details', { scroll: true })} className="bg-pink-200 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
                   <div
                     className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" className="fill-gray-800 inline-block" viewBox="0 0 64 64">
@@ -54,34 +70,26 @@ export default function ProductList() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-extrabold text-gray-800">Sole Elegance</h3>
+                    <h3 className="text-lg  text-gray-800">Sole Elegance</h3>
                     <p className="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <h4 className="text-lg text-gray-800 font-bold mt-4">$10</h4>
                   </div>
+                  <button type="button"
+                    className="w-full flex items-center justify-center gap-3 mt-6 px-6 py-3 bg-yellow-500 text-base text-gray-800 font-semibold rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 512 512">
+                      <path
+                        d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
+                        data-original="#000000"></path>
+                    </svg>
+                    Add to cart</button>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div> */}
-
-      <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
-        {/* CAMPAIGN */}
-        <div className="hidden bg-pink-50 px-4 sm:flex justify-between h-64">
-          <div className="w-2/3 flex flex-col items-center justify-center gap-8">
-            <h1 className="text-4xl font-semibold leading-[48px] text-gray-700">
-              Grab up to 50% off on
-              <br /> Selected Products
-            </h1>
-            <button className="rounded-3xl bg-lama text-white w-max py-3 px-5 text-sm">
-              Buy Now
-            </button>
-          </div>
-          <div className="relative w-1/3">
-            <Image src="/woman.png" alt="" fill className="object-contain" />
-          </div>
-        </div>
       </div>
+
+
     </>
   );
 }

@@ -8,8 +8,9 @@ export default function MenuHeader() {
   };
   return (
     <>
-      <header className="shadow-md font-[sans-serif] tracking-wide w-full z-50 fixed">
-        <section className="md:flex lg:items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[80px] max-lg:min-h-[60px]">
+      <header className=" from-neutral-100 tracking-wide w-full z-50 fixed">
+        <section className="md:flex lg:items-center relative py-3 lg:px-10 px-4 
+         border-b bg-pink-300 lg:min-h-[80px] max-lg:min-h-[50px] z-50">
           <a
             href="#"
             className="max-sm:w-full max-sm:mb-3 shrink-0"
@@ -26,17 +27,21 @@ export default function MenuHeader() {
               type="text"
               disabled
               placeholder="Search something..."
-              className="xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4 bg-gray-100 focus:bg-transparent px-6 rounded h-11 outline-[#333] text-sm transition-all"
+              className="xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4
+               bg-gray-100 focus:bg-transparent px-6 rounded h-11
+                outline-[#333] text-sm transition-all"
             />
-            <div className="ml-auto max-lg:mt-4">
+            <div className="ml-auto max-lg:mt-4 text-gray-950">
               <ul className="flex items-center">
-                <li className="max-sm:hidden flex text-[15px] max-lg:py-2 px-3 font-medium text-[#333] cursor-pointer">
+                <li className="max-sm:hidden flex text-[15px] max-lg:py-2 px-3 font-medium
+                 text-gray-950 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
                     height="20px"
                     className="mr-2"
                     viewBox="0 0 24 24"
+
                   >
                     <g data-name="Layer 2">
                       <path
@@ -55,7 +60,8 @@ export default function MenuHeader() {
                   </svg>
                   Stores and Services
                 </li>
-                <li className="max-sm:hidden flex text-[15px] max-lg:py-2 px-3 font-medium text-[#333] cursor-pointer">
+                <li className="max-sm:hidden flex text-[15px] max-lg:py-2 px-3 font-medium 
+                 text-gray-900 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -89,8 +95,11 @@ export default function MenuHeader() {
                     </span>
                   </span>
                 </li>
-                <li className="flex text-[15px] max-lg:py-2 px-3 hover:text-[#007bff] hover:fill-[#007bff]">
-                  <button className="px-4 py-2 text-sm rounded font-semibold text-[#333] border-2 border-[#333] bg-transparent">
+                <li className="flex text-[15px] max-lg:py-2 px-3
+                 hover:text-yellow-600 
+                hover:fill-yellow-500">
+                  <button className="px-4 py-2 text-sm rounded font-semibold text-gray-900
+                   border-2 border-[#333] bg-transparent">
                     Sign In
                   </button>
                 </li>
@@ -121,7 +130,7 @@ export default function MenuHeader() {
             display: isOpen ? "block" : "none",
             transition: "display 0.3s ease",
           }}
-          className="max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50"
+          className="max-lg:hidden lg:!block max-lg:before:fixed  max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50"
         >
           <button
             id="toggleClose"
@@ -149,7 +158,7 @@ export default function MenuHeader() {
           gap-4 max-lg:space-y-4 max-lg:fixed max-lg:w-1/2 
           max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0
            max-lg:p-6 max-lg:h-full max-lg:shadow-current
-           max-lg:overflow-auto z-50  bg-pink-100 mb-4"> 
+           max-lg:overflow-auto z-50  bg-pink-800 mb-4 text-cyan-100"> 
             <li className="mb-6 hidden max-lg:block">
               <a href="#">
                 <img
@@ -159,7 +168,7 @@ export default function MenuHeader() {
                 />
               </a>
             </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3 text-[#333]">
+            <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="#"
                 className="text-[15px] font-medium block"
