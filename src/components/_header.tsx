@@ -1,7 +1,11 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import { useSelector } from 'react-redux';
 export default function MenuHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const item = useSelector((state:any)=>state.cart)
+  console.log(item)
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);
 
@@ -76,6 +80,7 @@ export default function MenuHeader() {
                   </svg>
                   Communty
                 </li>
+                <Link href="product_cart">
                 <li className="max-lg:py-2 px-3 cursor-pointer">
                   <span className="relative">
                     <svg
@@ -91,10 +96,11 @@ export default function MenuHeader() {
                       ></path>
                     </svg>
                     <span className="absolute left-auto -ml-1 -top-1 rounded-full bg-red-500 px-1 py-0 text-xs text-white">
-                      0
+                      {item?.items?.length}
                     </span>
                   </span>
                 </li>
+                </Link>
                 <li className="flex text-[15px] max-lg:py-2 px-3
                  hover:text-yellow-600 
                 hover:fill-yellow-500">

@@ -21,21 +21,18 @@ export interface CATEGORY_LAYOUT {
   productList: PRODUCT[];
 }
 
-export interface categoryProduct {
-  product_id: number;
-  product_name: string;
-  product_image: string;
-  category_id: number;
-  product_description: string;
-}
-
-export interface DemoModel {
-  userId: number;
+export interface Product {
   id: number;
   title: string;
-  completed: boolean;
+  price: string;
+  description: number;
+  category: string;
+  image:string
 }
 
-export interface DemoModelProp {
-  propList: DemoModel[];
+export interface cartItem{
+  items:[],
+  totalPrice:number |any,
+  totalQuantity:number
 }
+

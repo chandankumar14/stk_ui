@@ -1,17 +1,16 @@
 "use client";
-import { DemoModel } from "@/app/../components/models/_product_model";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/Redux/cartSlice"
 import { Subscription } from "rxjs";
 import Image from "next/image";
-import {
-  GetHomePageBannerList,
-  GetProductList,
-} from "../services/_home_page_service";
+import { GetProductList } from "../services/_home_page_service";
+import { Product } from "@/components/models/_product_model";
 export default function ProductList() {
   const router = useRouter();
-  const [products, setProducts] = useState<DemoModel[]>([]);
-  const [Banner, setBenner] = useState<DemoModel[]>([]);
+  const dispatch = useDispatch();
+  const [products, setProducts] = useState<Product[]>([]);
   const [error, setError] = useState<string | null>();
   useEffect(() => {
     const subscription: Subscription = GetProductList().subscribe({
@@ -21,18 +20,14 @@ export default function ProductList() {
     return () => subscription.unsubscribe();
   }, []);
 
-  useEffect(() => {
-    const subscribe = GetHomePageBannerList().subscribe({
-      next: (data) => setBenner(data),
-      error: (err) => setError("Failed to fetch products"),
-    });
-    return () => subscribe.unsubscribe();
-  }, []);
+  const addProductIntoCart = (product: Product) => {
+    dispatch(addToCart(product));
+  }
 
   return (
     <>
+    {/* onClick={() => router.push('/product_details', { scroll: true })} */}
       <div className="px-4 md:px-8 lg:px-16 xl:px-4 2xl:px-64 py-[160px] bg-pink-100">
-        {/* CAMPAIGN */}
         <div className="hidden bg-pink-100 px-4 sm:flex  h-64 container">
           <div className="w-2/3 flex flex-col items-center justify-center ">
             <h1 className="text-4xl font-semibold  text-gray-700">
@@ -49,12 +44,11 @@ export default function ProductList() {
         </div>
       </div>
       <div className="ml-2 bg-white rounded-none">
-
         <div className="font-[sans-serif] bg-gray-100">
           <div className="p-4 mx-auto lg:max-w-7xl sm:max-w-full">
             <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6">
               {products.map((product) => (
-                <div key={product.id} onClick={() => router.push('/product_details', { scroll: true })} className="bg-pink-200 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+                <div key={product.id}  className="bg-pink-200 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
                   <div
                     className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" className="fill-gray-800 inline-block" viewBox="0 0 64 64">
@@ -65,16 +59,20 @@ export default function ProductList() {
                   </div>
 
                   <div className="w-5/6 h-[210px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4">
-                    <img src="https://readymadeui.com/images/product9.webp" alt="Product 1"
+                    <Image src={product.image}
+                      width={200}
+                      height={200}
+                      alt="Product 1"
                       className="h-full w-full object-contain" />
                   </div>
 
                   <div>
-                    <h3 className="text-lg  text-gray-800">Sole Elegance</h3>
+                    <h3 className="text-lg  text-gray-800">{product?.title}</h3>
                     <p className="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <h4 className="text-lg text-gray-800 font-bold mt-4">$10</h4>
+                    <h4 className="text-lg text-gray-800 font-bold mt-4">${product?.price}</h4>
                   </div>
                   <button type="button"
+                    onClick={() => addProductIntoCart(product)}
                     className="w-full flex items-center justify-center gap-3 mt-6 px-6 py-3 bg-yellow-500 text-base text-gray-800 font-semibold rounded-xl">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 512 512">
                       <path
