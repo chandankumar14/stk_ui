@@ -1,7 +1,6 @@
 "use client";
-import { useRouter } from "next/navigation";
 export default function productDetails() {
-  const router = useRouter();
+ 
   return (
     <>
       <div className="font-sans bg-neutral-100 p-8 tracking-wide max-lg:max-w-2xl mx-auto py-[200px]">

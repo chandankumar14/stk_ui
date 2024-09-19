@@ -33,7 +33,7 @@ export default function Home() {
         <section className="max-w-full overflow-hidden mt-12 lg:h-96 sm:h-52">
           <Slider {...CarouselConfig}>
             {SlideData.map((item: any) => (
-              <img src={item.name} alt="" className="object-fill" />
+              <img src={item.name} alt="" key={item.name} className="object-fill" />
             ))}
           </Slider>
         </section>
