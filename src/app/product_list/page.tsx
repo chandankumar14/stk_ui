@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "@/Redux/cartSlice"
 import { Subscription } from "rxjs";
 import Image from "next/image";
+import Link from "next/link";
 import { GetProductList } from "../services/_home_page_service";
 import { Product } from "@/components/models/_product_model";
 export default function ProductList() {
@@ -58,6 +59,7 @@ export default function ProductList() {
                     </svg>
                   </div>
 
+                  <Link href="/product_details">
                   <div className="w-5/6 h-[210px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4">
                     <Image src={product.image}
                       width={200}
@@ -65,12 +67,15 @@ export default function ProductList() {
                       alt="Product 1"
                       className="h-full w-full object-contain" />
                   </div>
+                  </Link>
 
-                  <div>
+                 <Link href="/product_details" >
+                 <div>
                     <h3 className="text-lg  text-gray-800">{product?.title}</h3>
                     <p className="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <h4 className="text-lg text-gray-800 font-bold mt-4">${product?.price}</h4>
                   </div>
+                 </Link>
                   <button type="button"
                     onClick={() => addProductIntoCart(product)}
                     className="w-full flex items-center justify-center gap-3 mt-6 px-6 py-3 bg-yellow-500 text-base text-gray-800 font-semibold rounded-xl">

@@ -20,7 +20,7 @@ export default function MenuHeader() {
             className="max-sm:w-full max-sm:mb-3 shrink-0"
           >
             <img
-              src="https://readymadeui.com/readymadeui.svg"
+              src=""
               alt="logo"
               className="w-[160px]"
             />
@@ -32,7 +32,7 @@ export default function MenuHeader() {
               disabled
               placeholder="Search something..."
               className="xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4
-               bg-gray-100 focus:bg-transparent px-6 rounded h-11
+               bg-pink-200 focus:bg-transparent px-6 rounded h-11
                 outline-[#333] text-sm transition-all"
             />
             <div className="ml-auto max-lg:mt-4 text-gray-950">

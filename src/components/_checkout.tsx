@@ -1,3 +1,5 @@
+"use client"
+import Image from "next/image"
 export default function CheckOut() {
   return (
     <>
@@ -9,7 +11,7 @@ export default function CheckOut() {
           </p>
           <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
-              <img
+              <Image
                 className="m-2 h-24 w-28 rounded-md border object-cover object-center"
                 src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                 alt=""
@@ -23,7 +25,7 @@ export default function CheckOut() {
               </div>
             </div>
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
-              <img
+              <Image
                 className="m-2 h-24 w-28 rounded-md border object-cover object-center"
                 src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                 alt=""
@@ -49,7 +51,7 @@ export default function CheckOut() {
               />
               <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
               <label className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4">
-                <img
+                <Image
                   className="w-14 object-contain"
                   src="/images/naorrAeygcJzX0SyNI4Y0.png"
                   alt=""
@@ -72,7 +74,7 @@ export default function CheckOut() {
               />
               <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
               <label className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4">
-                <img
+                <Image
                   className="w-14 object-contain"
                   src="/images/oG8xsl3xsOkwkMsrLGKM4.png"
                   alt=""
@@ -200,7 +202,7 @@ export default function CheckOut() {
                   placeholder="Street Address"
                 />
                 <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
-                  <img
+                  <Image
                     className="h-4 w-4 object-contain"
                     src="https://flagpack.xyz/_nuxt/4c829b6c0131de7162790d2f897a90fd.svg"
                     alt=""

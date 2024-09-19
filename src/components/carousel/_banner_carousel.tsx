@@ -2,6 +2,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image"
 const SlideData = [
   {
     name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/3/03_14.jpg",
@@ -29,7 +30,7 @@ export default function BannerCarousel(payload: any) {
       <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
         <Slider {...CarouselConfig}>
           {payload.map((item: any) => (
-            <img src={item.name} alt="" className="object-fill" />
+            <Image src={item.name} alt="" className="object-fill" />
           ))}
         </Slider>
       </section>

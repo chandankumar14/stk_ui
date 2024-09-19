@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AspectLayout from "@/components/layout/_aspect_layout";
 import PopularProducts from "@/components/_popular_products";
+import Image from "next/image"
 const SlideData = [
   {
     name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/3/03_14.jpg",
@@ -49,9 +50,11 @@ export default function Home() {
           before:bg-black before:opacity-50 
           before:z-10"
           >
-            <img
+            <Image
               src="https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/5/05_7.jpg"
               alt="Banner Image"
+              width={500}
+              height={500}
               className="absolute inset-0 w-full h-full object-cover"
             />
 
@@ -96,9 +99,11 @@ export default function Home() {
               </div>
 
               <div className="lg:h-[480px] flex items-center">
-                <img
+                <Image
                   src="https://media.samyakk.com/pub/media/wysiwyg/codilar/Lehenga-saga/image_6.png"
                   className="w-full h-full object-cover"
+                  width={500}
+                  height={500}
                   alt="Dining Experience"
                 />
               </div>

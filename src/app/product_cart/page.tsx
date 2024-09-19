@@ -2,7 +2,7 @@
 import { cartItem, Product } from "@/components/models/_product_model";
 import { useDispatch, useSelector } from "react-redux";
 import productDetails from "../product_details/page";
-
+import Image from "next/image"
 export default function CartList() {
   const dispatch = useDispatch();
   let ProductList: Product[] = []
@@ -18,7 +18,8 @@ export default function CartList() {
             {ProductList.map((item: Product) => (
               <div className="flex items-start max-sm:flex-col gap-4 py-4" key={item.id}>
                 <div className="h-36 shrink-0">
-                  <img
+                  <Image
+                  alt="product image"
                     src="https://readymadeui.com/images/product6.webp"
                     className="w-full h-full object-contain rounded-md"
                   />
