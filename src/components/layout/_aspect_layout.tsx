@@ -17,7 +17,7 @@ const product = {
       alt: "Model wearing plain gray basic tee.",
     },
     {
-      src: "	https://media.samyakk.com/pub/media/sarees/cro_occ_3.jpg",
+      src: "https://media.samyakk.com/pub/media/sarees/cro_occ_3.jpg",
       alt: "Model wearing plain white basic tee.",
     },
   ],
