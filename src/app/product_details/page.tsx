@@ -28,7 +28,7 @@ export default function productDetails() {
               <p className="text-sm text-gray-600 mt-2">Well-Versed Commerce</p>
             </div>
             <div className="mt-4">
-              <h3 className="text-gray-800 text-4xl font-bold">$30</h3>
+              <h3 className="text-gray-800 text-4xl font-bold">30</h3>
             </div>
             
             <div className="flex flex-wrap gap-4 mt-8">
@@ -46,14 +46,14 @@ export default function productDetails() {
 
               <div className="mt-8">
                 <h3 className="text-lg font-bold text-gray-800">Product Description</h3>
-                <p className="text-sm text-gray-600 mt-4">Step up your footwear game with our premium men's shoes. Designed for comfort and crafted with a contemporary aesthetic, these versatile shoes are a must-have addition to your wardrobe. The supple and breathable materials ensure all-day comfort, making them perfect for everyday wear.</p>
+                <p className="text-sm text-gray-600 mt-4">Step up your footwear game with our premium mens shoes. Designed for comfort and crafted with a contemporary aesthetic, these versatile shoes are a must-have addition to your wardrobe. The supple and breathable materials ensure all-day comfort, making them perfect for everyday wear.</p>
               </div>
 
               <ul className="space-y-3 list-disc mt-6 pl-4 text-sm text-gray-600">
                 <li>A pair of gray shoes is a wardrobe essential due to its versatility.</li>
                 <li>Available in a wide range of sizes, from extra small to extra large, and even in tall and petite sizes.</li>
                 <li>Easy to maintain, they can be machine-washed and dried on low heat.</li>
-                <li>Personalize them with your own designs, patterns, or embellishments to make them uniquely yours.</li>
+                <li>Personalize them with your own designs patterns or embellishments to make them uniquely yours.</li>
               </ul>
             </div>
           </div>
