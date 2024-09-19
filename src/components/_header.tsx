@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 export default function MenuHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const item = useSelector((state:any)=>state.cart)
-  console.log(item)
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);
 

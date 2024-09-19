@@ -1,14 +1,13 @@
 "use client";
 import { cartItem, Product } from "@/components/models/_product_model";
 import { useDispatch, useSelector } from "react-redux";
-import productDetails from "../product_details/page";
 import Image from "next/image"
 export default function CartList() {
   const dispatch = useDispatch();
-  let ProductList: Product[] = []
-  useSelector((state: cartItem) => {
-    ProductList = state.items
-  });
+const ProductList = useSelector((state:any) => {
+  console.log(state?.cart?.items)
+  return state?.cart?.items || []
+});
 
   return (
     <>
@@ -20,6 +19,8 @@ export default function CartList() {
                 <div className="h-36 shrink-0">
                   <Image
                   alt="product image"
+                  width={200}
+                  height={200}
                     src="https://readymadeui.com/images/product6.webp"
                     className="w-full h-full object-contain rounded-md"
                   />
