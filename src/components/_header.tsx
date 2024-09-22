@@ -4,22 +4,22 @@ import Link from "next/link";
 import { useSelector } from 'react-redux';
 export default function MenuHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const item = useSelector((state:any)=>state.cart)
+  const item = useSelector((state: any) => state.cart)
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);
 
   };
   return (
     <>
-      <header className=" from-neutral-100 tracking-wide w-full z-50 fixed">
+      <header className="tracking-wide w-full z-50 fixed">
         <section className="md:flex lg:items-center relative py-3 lg:px-10 px-4 
-         border-b bg-pink-300 lg:min-h-[80px] max-lg:min-h-[50px] z-50">
+         border-b bg-black lg:min-h-[80px] max-lg:min-h-[50px] z-50">
           <a
             href="#"
             className="max-sm:w-full max-sm:mb-3 shrink-0"
           >
             <img
-              src=""
+              src="/logo.png"
               alt="logo"
               className="w-[160px]"
             />
@@ -31,13 +31,13 @@ export default function MenuHeader() {
               disabled
               placeholder="Search something..."
               className="xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4
-               bg-pink-200 focus:bg-transparent px-6 rounded h-11
+               bg-gray-600 focus:bg-transparent px-6 rounded h-11
                 outline-[#333] text-sm transition-all"
             />
             <div className="ml-auto max-lg:mt-4 text-gray-950">
               <ul className="flex items-center">
                 <li className="max-sm:hidden flex text-[15px] max-lg:py-2 px-3 font-medium
-                 text-gray-950 cursor-pointer">
+                 text-white cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -64,7 +64,7 @@ export default function MenuHeader() {
                   Stores and Services
                 </li>
                 <li className="max-sm:hidden flex text-[15px] max-lg:py-2 px-3 font-medium 
-                 text-gray-900 cursor-pointer">
+                 text-white cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -80,30 +80,30 @@ export default function MenuHeader() {
                   Communty
                 </li>
                 <Link href="product_cart">
-                <li className="max-lg:py-2 px-3 cursor-pointer">
-                  <span className="relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20px"
-                      height="20px"
-                      className="inline"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
-                        data-original="#000000"
-                      ></path>
-                    </svg>
-                    <span className="absolute left-auto -ml-1 -top-1 rounded-full bg-red-500 px-1 py-0 text-xs text-white">
-                      {item?.items?.length}
+                  <li className="max-lg:py-2 px-3 cursor-pointer">
+                    <span className="relative bg-slate-200">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20px"
+                        height="20px"
+                        className="inline mix-blend-multiply bg-slate-400"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
+                          data-original="#000000"
+                        ></path>
+                      </svg>
+                      <span className="absolute left-auto -ml-1 -top-1 rounded-full bg-red-500 px-1 py-0 text-xs text-white">
+                        {item?.items?.length}
+                      </span>
                     </span>
-                  </span>
-                </li>
+                  </li>
                 </Link>
                 <li className="flex text-[15px] max-lg:py-2 px-3
                  hover:text-yellow-600 
                 hover:fill-yellow-500">
-                  <button className="px-4 py-2 text-sm rounded font-semibold text-gray-900
+                  <button className="px-4 py-2 text-sm rounded font-semibold text-yellow-400
                    border-2 border-[#333] bg-transparent">
                     Sign In
                   </button>
@@ -163,7 +163,7 @@ export default function MenuHeader() {
           gap-4 max-lg:space-y-4 max-lg:fixed max-lg:w-1/2 
           max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0
            max-lg:p-6 max-lg:h-full max-lg:shadow-current
-           max-lg:overflow-auto z-50  bg-pink-800 mb-4 text-cyan-100"> 
+           max-lg:overflow-auto z-50  bg-yellow-950 mb-4 text-cyan-100">
             <li className="mb-6 hidden max-lg:block">
               <a href="#">
                 <img
@@ -173,64 +173,31 @@ export default function MenuHeader() {
                 />
               </a>
             </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className="text-[15px] font-medium block"
-              >
-                New arrival
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className=" text-[15px] font-medium block"
-              >
-                Brands
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className=" text-[15px] font-medium block"
-              >
-                All Product
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className=" text-[15px] font-medium block"
-              >
-               Trending
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className=" text-[15px] font-medium block"
-              >
-                Collections
-              </a>
-            </li>
-            
-            
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className=" text-[15px] font-medium block"
-              >
-                Gifts
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a
-                href="#"
-                className=" text-[15px] font-medium block"
-              >
-               Shop by Occasion
-              </a>
-            </li>
+            <Link href="/product_list" className="max-lg:border-b max-lg:py-3 px-3 text-[15px] font-medium block">
+              New arrival
+
+            </Link>
+            <Link href="/product_list" className="max-lg:border-b max-lg:py-3 px-3 text-[15px] font-medium block">
+              Brands
+            </Link>
+            <Link href="/product_list" className="max-lg:border-b max-lg:py-3 px-3 text-[15px] font-medium block">
+              All Product
+            </Link>
+            <Link href="/product_list" className="max-lg:border-b max-lg:py-3 px-3 text-[15px] font-medium block">
+              Trending
+            </Link>
+            <Link href="/product_list" className="max-lg:border-b max-lg:py-3 px-3 text-[15px] font-medium block">
+              Collections
+            </Link>
+
+
+            <Link href="/" className="max-lg:border-b max-lg:py-3 px-3 text-[15px] font-medium block">
+              Gifts
+            </Link>
+            <Link href="/product_list" className="max-lg:border-b max-lg:py-3 px-3 text-[15px] font-medium block">
+              Shop by Occasion
+
+            </Link>
           </ul>
         </div>
       </header>

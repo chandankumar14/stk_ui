@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="text-2xl tracking-wide">Saatikaa</div>
             </Link>
             <p>
-              3252 Winding Way, Central Plaza, Willowbrook, CA 90210, United
+              Address
               States
             </p>
             <span className="font-semibold">saatikaa.sheetal@lama.com</span>

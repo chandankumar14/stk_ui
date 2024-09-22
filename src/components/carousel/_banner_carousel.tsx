@@ -27,8 +27,8 @@ export default function BannerCarousel(payload: any) {
 
   return (
     <>
-      <section className="max-w-full overflow-hidden lg:h-96 sm:h-52">
-        <Slider {...CarouselConfig}>
+      <section className="max-w-full py-10 overflow-hidden lg:h-96 sm:h-52">
+        <Slider {...CarouselConfig} >
           {payload.map((item: any) => (
             <Image src={item.name} alt="" key={item.name} className="object-fill" />
           ))}

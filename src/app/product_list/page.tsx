@@ -49,7 +49,7 @@ export default function ProductList() {
           <div className="p-4 mx-auto lg:max-w-7xl sm:max-w-full">
             <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6">
               {products.map((product) => (
-                <div key={product.id}  className="bg-pink-200 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+                <div key={product.id}  className="bg-pink-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
                   <div
                     className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" className="fill-gray-800 inline-block" viewBox="0 0 64 64">
@@ -65,7 +65,7 @@ export default function ProductList() {
                       width={200}
                       height={200}
                       alt="Product 1"
-                      className="h-full w-full object-contain" />
+                      className="h-full w-full object-contain mix-blend-multiply" />
                   </div>
                   </Link>
 

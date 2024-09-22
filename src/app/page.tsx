@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <main className="py-20 sm:py-20 md:py-20 ">
-        <section className="max-w-full overflow-hidden mt-12 lg:h-96 sm:h-52">
+        <section className="max-w-full py-5 overflow-hidden mt-12 lg:h-96 sm:h-52">
           <Slider {...CarouselConfig}>
             {SlideData.map((item: any) => (
               <img src={item.name} alt="" key={item.name} className="object-fill" />
@@ -109,6 +109,7 @@ export default function Home() {
               </div>
             </div>
 
+            <h1 className="text-center text-3xl py-4 font-sans text-gray-500 italic bg-pink-50">Most Trending Products</h1>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 px-4 my-12">
               <div className="bg-pink-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
                 <div className="bg-pink-400 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">

@@ -23,65 +23,65 @@ const product = {
   ],
 };
 export default function AspectLayout() {
-  
+
   return (
     <>
       <section>
-        <h2 className="text-base font-semibold leading-7 text-center">
+        <h1 className="text-3xl leading-7 text-center py-4">
           Shop by Occasion
-        </h2>
+        </h1>
         <div
           className="mx-auto mt-3 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl 
                 lg:grid-cols-3 lg:gap-x-8 lg:px-2"
         >
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-           <Link href="/product_list">
-           <Image
-              src={product.images[0].src}
-              alt={product.images[0].alt}
-              width={400}
-              height={400}
-              className="h-full w-full object-cover object-center cursor-pointer"
-              
-            />
-           </Link>
-          </div>
-          <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg"
-           >
-              <Link href="/product_list">
+            <Link href="/product_list">
               <Image
-                src={product.images[1].src}
-                alt={product.images[1].alt}
+                src={product.images[0].src}
+                alt={product.images[0].alt}
                 width={400}
                 height={400}
                 className="h-full w-full object-cover object-center cursor-pointer"
+
               />
+            </Link>
+          </div>
+          <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg"
+            >
+              <Link href="/product_list">
+                <Image
+                  src={product.images[1].src}
+                  alt={product.images[1].alt}
+                  width={400}
+                  height={400}
+                  className="h-full w-full object-cover object-center cursor-pointer"
+                />
               </Link>
             </div>
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg"
             >
               <Link href="/product_list">
+                <Image
+                  src={product.images[2].src}
+                  alt={product.images[2].alt}
+                  width={400}
+                  height={400}
+                  className="h-full w-full object-cover object-center cursor-pointer"
+                />
+              </Link>
+            </div>
+          </div>
+          <div
+            className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+            <Link href="/product_list">
               <Image
-                src={product.images[2].src}
-                alt={product.images[2].alt}
+                src={product.images[3].src}
+                alt={product.images[3].alt}
                 width={400}
                 height={400}
                 className="h-full w-full object-cover object-center cursor-pointer"
               />
-              </Link>
-            </div>
-          </div>
-          <div  
-          className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-            <Link href="/product_list">
-            <Image
-              src={product.images[3].src}
-              alt={product.images[3].alt}
-              width={400}
-                height={400}
-              className="h-full w-full object-cover object-center cursor-pointer"
-            />
             </Link>
           </div>
         </div>
