@@ -23,15 +23,15 @@ const product = {
 };
 export default function AspectLayout() {
 
-  return (
+  return ( 
     <>
       <section>
-        <h1 className="text-3xl leading-7 text-center py-4">
+        <h1 className="text-3xl font-sans text-center bg-pink-100 py-4">
           Shop by Occasion
         </h1>
         <div
           className="mx-auto mt-3 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl 
-                lg:grid-cols-3 lg:gap-x-8 lg:px-2"
+                lg:grid-cols-3 lg:gap-x-8 lg:px-2 bg-pink-100"
         >
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
             <Link href="/product_list">

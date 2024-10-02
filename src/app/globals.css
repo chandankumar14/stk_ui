@@ -17,24 +17,22 @@
   }
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
-
-.slick-dots li{
-  background-color:gray;
+.slick-dots li {
+  background-color: gray;
   border-radius: 50%;
 }
+
+
+.slick-prev, .slick-next {
+  background: rgb(127, 153, 207) !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 30%;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-

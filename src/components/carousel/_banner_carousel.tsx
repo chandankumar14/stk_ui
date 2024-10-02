@@ -2,21 +2,20 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image"
 const SlideData = [
   {
-    name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/3/03_14.jpg",
+    name: "https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/3/03_14.jpg",
   },
   {
-    name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/5/05_7.jpg",
+    name: "https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/5/05_7.jpg",
   },
   {
-    name: "	https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/4/04_11.jpg",
+    name: "https://media.samyakk.com/pub/media/magestore/bannerslider/images//0/4/04_11.jpg",
   },
 ];
-export default function BannerCarousel(payload: any) {
+export default function BannerCarousel() {
   const CarouselConfig = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -27,10 +26,10 @@ export default function BannerCarousel(payload: any) {
 
   return (
     <>
-      <section className="max-w-full py-10 overflow-hidden lg:h-96 sm:h-52">
-        <Slider {...CarouselConfig} >
-          {payload.map((item: any) => (
-            <Image src={item.name} alt="" key={item.name} className="object-fill" />
+      <section className="max-w-full py-5 overflow-hidden mt-12 lg:h-96 sm:h-52">
+        <Slider {...CarouselConfig}>
+          {SlideData.map((item: any) => (
+            <img src={item.name} alt="" key={item.name} className="object-fill" />
           ))}
         </Slider>
       </section>

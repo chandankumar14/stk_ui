@@ -2,6 +2,7 @@
 import { cartItem, Product } from "@/components/models/_product_model";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image"
+import MostSellingProduct from "@/components/carousel/_most_selling";
 export default function CartList() {
   const dispatch = useDispatch();
 const ProductList = useSelector((state:any) => {
@@ -137,6 +138,7 @@ const ProductList = useSelector((state:any) => {
           </div>
         </div>
       </div>
+      <MostSellingProduct />
     </>
   );
 }
