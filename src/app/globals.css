@@ -24,10 +24,10 @@
 
 
 .slick-prev, .slick-next {
-  background: rgb(127, 153, 207) !important;
+  background: rgb(247, 90, 29) !important;
   width: 30px !important;
   height: 30px !important;
-  border-radius: 30%;
+  border-radius: 10%;
 }
 
 
