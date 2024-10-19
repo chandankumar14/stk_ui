@@ -30,10 +30,12 @@ export default function MenuHeader() {
               type="text"
               disabled
               placeholder="Search something..."
-              className="xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4
-               bg-gray-600 focus:bg-transparent px-6 rounded h-11
-                outline-[#333] text-sm transition-all"
+              className="xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4 bg-gray-600 
+             focus:bg-transparent px-6 rounded h-11 outline-[#333] text-sm 
+             transition-all hidden sm:block"
             />
+
+
             <div className="ml-auto max-lg:mt-4 text-gray-950">
               <ul className="flex items-center">
                 <li className="max-sm:hidden flex text-[15px] max-lg:py-2 px-3 font-medium
@@ -167,7 +169,7 @@ export default function MenuHeader() {
             <li className="mb-6 hidden max-lg:block">
               <a href="#">
                 <img
-                  src="https://readymadeui.com/readymadeui-white.svg"
+                  src="/logo.png"
                   alt="logo"
                   className="w-36"
                 />
