@@ -1,28 +1,39 @@
 "use client";
-import { cartItem, Product } from "@/components/models/_product_model";
+import { CartItem, RootState } from "@/components/models/_product_model";
 import { useDispatch, useSelector } from "react-redux";
+import { increaseQty, decreaseQty, removeFromCart } from "@/Redux/cartSlice"; // Adjust import path
 import Image from "next/image"
 import MostSellingProduct from "@/components/carousel/_most_selling";
 export default function CartList() {
-  const dispatch = useDispatch();
-const ProductList = useSelector((state:any) => {
-  console.log(state?.cart?.items)
+const dispatch = useDispatch();
+// Function to increase quantity of a product
+const handleIncrease = (id: string) => {
+  dispatch(increaseQty(id));
+};
+const handleDecrease = (id: string) => {
+  dispatch(decreaseQty(id));
+};
+const handleRemove = (id: string) => {
+  dispatch(removeFromCart(id));
+}
+const ProductList = useSelector((state:RootState) => {
+  console.log(state.cart.items)
   return state?.cart?.items || []
 });
 
-  return (
+return (
     <>
       <div className="font-sans py-[190px]">
         <div className="grid lg:grid-cols-3 gap-10 p-4">
           <div className="lg:col-span-2 bg-white divide-y">
-            {ProductList.map((item: Product) => (
+            {ProductList.map((item: CartItem) => (
               <div className="flex items-start max-sm:flex-col gap-4 py-4" key={item.id}>
                 <div className="h-36 shrink-0">
                   <Image
                   alt="product image"
                   width={200}
                   height={200}
-                    src="https://readymadeui.com/images/product6.webp"
+                    src={item.image}
                     className="w-full h-full object-contain rounded-md"
                   />
                 </div>
@@ -35,13 +46,14 @@ const ProductList = useSelector((state:any) => {
                         Size: <strong className="ml-2">7.5</strong>
                       </h6>
                       <h6 className="text-sm text-gray-800">
-                        Color: <strong className="ml-2">Black</strong>
+                        price: <strong className="ml-2">{item.price}</strong>
                       </h6>
                     </div>
 
                     <div className="mt-4 flex flex-wrap gap-4">
                       <button
                         type="button"
+                        onClick={() => handleRemove(item.id)}
                         className="font-semibold text-red-500 text-sm flex items-center gap-2 shrink-0"
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-current inline" viewBox="0 0 24 24">
@@ -50,15 +62,6 @@ const ProductList = useSelector((state:any) => {
                         </svg>
                         Remove
                       </button>
-                      <button
-                        type="button"
-                        className="font-semibold text-pink-500 text-sm flex items-center gap-2 shrink-0"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-current inline" viewBox="0 0 64 64">
-                          <path d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z" />
-                        </svg>
-                        Move to wish list
-                      </button>
                     </div>
                   </div>
 
@@ -66,15 +69,17 @@ const ProductList = useSelector((state:any) => {
                     <div className="flex items-center justify-end gap-3">
                       <button
                         type="button"
+                        onClick={() => handleDecrease(item.id)}
                         className="flex items-center justify-center w-5 h-5 bg-blue-600 outline-none rounded-full"
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-2 fill-white" viewBox="0 0 124 124">
                           <path d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z" />
                         </svg>
                       </button>
-                      <span className="font-bold text-sm leading-[18px]">1</span>
+                      <span className="font-bold text-sm leading-[18px]">{item.quantity}</span>
                       <button
                         type="button"
+                        onClick={() => handleIncrease(item.id)}
                         className="flex items-center justify-center w-5 h-5 bg-blue-600 outline-none rounded-full"
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-2 fill-white" viewBox="0 0 42 42">
@@ -85,7 +90,7 @@ const ProductList = useSelector((state:any) => {
 
                     <div className="mt-4">
                       <h4 className="text-lg font-bold text-gray-500 mb-1"></h4>
-                      <h4 className="text-lg font-bold text-gray-800">${item.price}</h4>
+                      <h4 className="text-lg font-bold text-gray-800">${item.totalPrice}</h4>
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,4 @@
 import Provider from "../Redux/provider"
-import store from '../Redux/store'; 
 import "./globals.css";
 import Footer from "@/components/_footer";
 import MenuHeader from "@/components/_header";

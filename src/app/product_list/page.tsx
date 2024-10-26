@@ -21,6 +21,7 @@ export default function ProductList() {
   }, []);
 
   const addProductIntoCart = (product: Product) => {
+    console.log(product)
     dispatch(addToCart(product));
   }
 
