@@ -29,6 +29,14 @@
   height: 30px !important;
   border-radius: 10%;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.07);
+  animation: sticky 1s;
+  z-index: 100;
+}
 
 
 @layer utilities {

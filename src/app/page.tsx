@@ -1,23 +1,17 @@
 "use client";
-import AspectLayout from "@/components/layout/_aspect_layout";
-import Image from "next/image"
-import MostSellingProduct from "@/components/carousel/_most_selling";
 import BannerCarousel from "@/components/carousel/_banner_carousel";
-import BanarasiSaree from "@/categories/banarasi/banarasi";
-import ChanderiSaree from "@/categories/chanderi/chanderi";
+import MostSellingHeroSection from "@/components/herosection/sale";
+import TrendingHeroSection from "@/components/herosection/trending";
+import MostPopularHeroSection from "@/components/herosection/popular";
 export default function Home() {
-
   return (
     <>
-      <main className="py-20 sm:py-20 md:py-20 ">
+      <main className="py-4 sm:py-4 md:py-4 ">
         <BannerCarousel />
-        <AspectLayout />
-        <section>
-          <MostSellingProduct />
-        </section>
-        <BanarasiSaree />
-        <ChanderiSaree />
-      </main>
+        <MostSellingHeroSection />
+        <TrendingHeroSection />
+        <MostPopularHeroSection />
+        </main>
     </>
   );
 }

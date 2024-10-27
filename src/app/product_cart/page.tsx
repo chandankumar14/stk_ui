@@ -23,7 +23,7 @@ const ProductList = useSelector((state:RootState) => {
 
 return (
     <>
-      <div className="font-sans py-[190px]">
+      <div className="font-sans">
         <div className="grid lg:grid-cols-3 gap-10 p-4">
           <div className="lg:col-span-2 bg-white divide-y">
             {ProductList.map((item: CartItem) => (
