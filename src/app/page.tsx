@@ -6,7 +6,7 @@ import MostPopularHeroSection from "@/components/herosection/popular";
 export default function Home() {
   return (
     <>
-      <main className="py-4 sm:py-4 md:py-4 ">
+      <main className="py-4 sm:py-4 md:py-4">
         <BannerCarousel />
         <MostSellingHeroSection />
         <TrendingHeroSection />
