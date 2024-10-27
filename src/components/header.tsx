@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Link from "next/link";
-export default function DemoHeader() {
+export default function HeaderSection() {
     const [isSticky, setIsSticky] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const item = useSelector((state: any) => state.cart)
