@@ -30,8 +30,8 @@ export default function MostSellingHeroSection() {
                                 className="h-full w-full px-2 py-2 object-contain mix-blend-hard-light" />
                         </div>
                         <div className="px-8 py-4">
-                            <p className="text-gray-500 text-[14px] font-medium">Headphones</p>
-                            <h2 className="font-medium">Gaming Headphone</h2>
+                            <p className="text-gray-500 text-[14px] font-medium">Pitambari Saree</p>
+                            <h2 className="font-medium">Pitambari Saree</h2>
                             <div className="flex justify-between items-center mt-4">
                                 <h2 className="font-medium text-accent text-xl">$40.50</h2>
                                 <div className="flex gap-2 items-center cursor-pointer">
@@ -56,8 +56,8 @@ export default function MostSellingHeroSection() {
                                 className="h-full w-full px-2 py-2 object-contain mix-blend-hard-light" />
                         </div>
                         <div className="px-8 py-4">
-                            <p className="text-gray-500 text-[14px] font-medium">Headphones</p>
-                            <h2 className="font-medium">Gaming Headphone</h2>
+                            <p className="text-gray-500 text-[14px] font-medium">Pitambari Saree</p>
+                            <h2 className="font-medium">Pitambari Saree</h2>
                             <div className="flex justify-between items-center mt-4">
                                 <h2 className="font-medium text-accent text-xl">$40.50</h2>
                                 <div className="flex gap-2 items-center cursor-pointer">
@@ -82,8 +82,8 @@ export default function MostSellingHeroSection() {
                                 className="h-full w-full px-2 py-2 object-contain mix-blend-hard-light" />
                         </div>
                         <div className="px-8 py-4">
-                            <p className="text-gray-500 text-[14px] font-medium">Headphones</p>
-                            <h2 className="font-medium">Gaming Headphone</h2>
+                            <p className="text-gray-500 text-[14px] font-medium">Pitambari Saree</p>
+                            <h2 className="font-medium">Pitambari Saree</h2>
                             <div className="flex justify-between items-center mt-4">
                                 <h2 className="font-medium text-accent text-xl">$40.50</h2>
                                 <div className="flex gap-2 items-center cursor-pointer">
