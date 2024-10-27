@@ -1,172 +1,119 @@
 "use client"
-import Image from "next/image"
-export default function CheckOut() {
-  return (
-    <>
-      <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32 py-[180px] bg-green-50">
-        <div className="px-4 pt-8">
-          <p className="text-xl font-medium">Order Summary</p>
-          <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
-            <div className="flex flex-col rounded-lg bg-white sm:flex-row">
-              <Image
-                className="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt=""
-              />
-              <div className="flex w-full flex-col px-4 py-4">
-                <span className="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
-                <span className="float-right text-gray-400">42EU - 8.5US</span>
-                <p className="text-lg font-bold">$138.99</p>
-              </div>
-            </div>
-            <hr />
-            <div className="flex flex-col rounded-lg bg-white sm:flex-row">
-              <Image
-                className="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt=""
-              />
-              <div className="flex w-full flex-col px-4 py-4">
-                <span className="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
-                <span className="float-right text-gray-400">42EU - 8.5US</span>
-                <p className="mt-auto text-lg font-bold">$238.99</p>
-              </div>
-            </div>
-          </div>
+import React, { useState } from 'react';
 
+const Checkout = () => {
+  const [paymentMethod, setPaymentMethod] = useState('credit');
+  const handlePaymentChange = (e:any) => {
+    setPaymentMethod(e.target.value);
+  };
+
+  return (
+    <div className="font-sans py-[100px]  bg-white rounded-lg shadow-md">
+       <div className="max-w-4xl mx-auto my-10">
+      <h1 className="text-3xl font-bold mb-6">Checkout</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Product Summary */}
+        <div className="bg-gray-100 p-4 rounded-lg">
+          <h2 className="text-xl font-semibold mb-2">Order Summary</h2>
+          <div className="flex justify-between mb-2">
+            <span>Product Name</span>
+            <span>$49.99</span>
+          </div>
+          <div className="flex justify-between mb-2">
+            <span>Quantity</span>
+            <span>1</span>
+          </div>
+          <div className="flex justify-between mb-2 font-bold">
+            <span>Total</span>
+            <span>$49.99</span>
+          </div>
         </div>
 
-        <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
-          <p className="text-xl font-medium">Payment Details</p>
-
-          <div className="">
-            <label className="mt-4 mb-2 block text-sm font-medium">Email</label>
-            <div className="relative">
-              <input
-                type="text"
-                id="email"
-                name="email"
-                className="w-full rounded-md border border-gray-200
-                 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10
-                  focus:border-blue-500 focus:ring-blue-500"
-                placeholder="your.email@gmail.com"
-              />
-
+        {/* Address Form */}
+        <div className="bg-gray-100 p-4 rounded-lg">
+          <h2 className="text-xl font-semibold mb-2">Shipping Information</h2>
+          <form>
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-sm font-medium mb-1">Full Name</label>
+              <input type="text" id="name" className="w-full p-2 border border-gray-300 rounded" required />
             </div>
-            <label className="mt-4 mb-2 block text-sm font-medium">
-              Card Holder
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                id="card-holder"
-                name="card-holder"
-                className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Your full name here"
-              />
-              <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-gray-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"
-                  />
-                </svg>
-              </div>
+            <div className="mb-4">
+              <label htmlFor="address" className="block text-sm font-medium mb-1">Address</label>
+              <input type="text" id="address" className="w-full p-2 border border-gray-300 rounded" required />
             </div>
-            <label className="mt-4 mb-2 block text-sm font-medium">
-              Card Details
-            </label>
-            <div className="flex">
-              <div className="relative w-7/12 flex-shrink-0">
+            <div className="mb-4">
+              <label htmlFor="city" className="block text-sm font-medium mb-1">City</label>
+              <input type="text" id="city" className="w-full p-2 border border-gray-300 rounded" required />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="zip" className="block text-sm font-medium mb-1">Zip Code</label>
+              <input type="text" id="zip" className="w-full p-2 border border-gray-300 rounded" required />
+            </div>
+
+            {/* Payment Method Selection */}
+            <h2 className="text-xl font-semibold mb-2">Payment Method</h2>
+            <div className="flex flex-col mb-4">
+              <label className="flex items-center mb-2">
                 <input
-                  type="text"
-                  id="card-no"
-                  name="card-no"
-                  className="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="xxxx-xxxx-xxxx-xxxx"
+                  type="radio"
+                  value="credit"
+                  checked={paymentMethod === 'credit'}
+                  onChange={handlePaymentChange}
+                  className="mr-2"
                 />
-                <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
-                  <svg
-                    className="h-4 w-4 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z" />
-                    <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z" />
-                  </svg>
-                </div>
-              </div>
-              <input
-                type="text"
-                name="credit-expiry"
-                className="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="MM/YY"
-              />
-              <input
-                type="text"
-                name="credit-cvc"
-                className="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="CVC"
-              />
-            </div>
-            <label className="mt-4 mb-2 block text-sm font-medium">
-              Billing Address
-            </label>
-            <div className="flex flex-col sm:flex-row">
-              <div className="relative flex-shrink-0 sm:w-7/12">
+                Credit Card
+              </label>
+              <label className="flex items-center mb-2">
                 <input
-                  type="text"
-                  id="billing-address"
-                  name="billing-address"
-                  className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="Street Address"
+                  type="radio"
+                  value="paypal"
+                  checked={paymentMethod === 'paypal'}
+                  onChange={handlePaymentChange}
+                  className="mr-2"
                 />
-
-              </div>
-
-              <input
-                type="text"
-                name="billing-zip"
-                className="flex-shrink-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none sm:w-1/6 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="ZIP"
-              />
+                PayPal
+              </label>
+              <label className="flex items-center mb-2">
+                <input
+                  type="radio"
+                  value="stripe"
+                  checked={paymentMethod === 'stripe'}
+                  onChange={handlePaymentChange}
+                  className="mr-2"
+                />
+                Stripe
+              </label>
             </div>
 
-            <div className="mt-6 border-t border-b py-2">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900">Subtotal</p>
-                <p className="font-semibold text-gray-900">$399.00</p>
+            {paymentMethod === 'credit' && (
+              <div className="mb-4">
+                <label htmlFor="cardNumber" className="block text-sm font-medium mb-1">Card Number</label>
+                <input type="text" id="cardNumber" className="w-full p-2 border border-gray-300 rounded" required />
               </div>
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900">Shipping</p>
-                <p className="font-semibold text-gray-900">$8.00</p>
+            )}
+            {paymentMethod === 'credit' && (
+              <div className="mb-4">
+                <label htmlFor="expiry" className="block text-sm font-medium mb-1">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry" className="w-full p-2 border border-gray-300 rounded" required />
               </div>
-            </div>
-            <div className="mt-6 flex items-center justify-between">
-              <p className="text-sm font-medium text-gray-900">Total</p>
-              <p className="text-2xl font-semibold text-gray-900">$408.00</p>
-            </div>
-          </div>
-          <button className="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">
-            Place Order
-          </button>
+            )}
+            {paymentMethod === 'credit' && (
+              <div className="mb-4">
+                <label htmlFor="cvv" className="block text-sm font-medium mb-1">CVV</label>
+                <input type="text" id="cvv" className="w-full p-2 border border-gray-300 rounded" required />
+              </div>
+            )}
+
+            <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition">
+              Place Order
+            </button>
+          </form>
         </div>
       </div>
-    </>
+    </div>
+    </div>
+   
   );
-}
+};
+
+export default Checkout;

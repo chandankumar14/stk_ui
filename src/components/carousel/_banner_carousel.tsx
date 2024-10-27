@@ -23,10 +23,9 @@ export default function BannerCarousel() {
     autoplay: true,
     autoplaySpeed: 4000,
   };
-
   return (
     <>
-      <section className="max-w-full py-5 overflow-hidden mt-12 lg:h-96 sm:h-52">
+      <section className="max-w-full  overflow-hidden  lg:h-96 sm:h-52">
         <Slider {...CarouselConfig}>
           {SlideData.map((item: any) => (
             <img src={item.name} alt="" key={item.name} className="object-fill" />
